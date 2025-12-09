@@ -1,0 +1,139 @@
+openapi: 3.0.4
+info:
+  title: Cocktail Recipe
+  description: Cocktail is a simple tool for getting cocktail recipes. It returns the ingredients, instructions, and more of the cocktail.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/cocktail:
+    get:
+      summary: Get Cocktail Recipe
+      description: Cocktail is a simple tool for getting cocktail recipes. It returns the ingredients, instructions, and more of the cocktail.
+      operationId: cocktail
+      parameters:
+      - name: name
+        in: query
+        schema:
+          type: string
+        required: false
+        description: The name of the cocktail for which you want to get the recipe (e.g., martini)
+        example: martini
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  count: 5
+                  filteredOn: name
+                  cocktails:
+                  - name: Espresso Martini
+                    glass: martini
+                    category: After Dinner Cocktail
+                    ingredients:
+                    - unit: cl
+                      amount: 5
+                      ingredient: Vodka
+                    - unit: cl
+                      amount: 1
+                      ingredient: Coffee liqueur
+                      label: Kahlúa
+                    - special: Sugar syrup (according to individual preference of sweetness)
+                    - special: 1 short strong Espresso
+                    preparation: Shake and strain into a chilled cocktail glass.
+                  - name: Lemon Drop Martini
+                    glass: martini
+                    category: All Day Cocktail
+                    ingredients:
+                    - unit: cl
+                      amount: 2.5
+                      ingredient: Vodka
+                      label: Citron Vodka
+                    - unit: cl
+                      amount: 2
+                      ingredient: Triple Sec
+                    - unit: cl
+                      amount: 1.5
+                      ingredient: Lemon juice
+                    garnish: Lemon slice
+                    preparation: Shake and strain into a chilled cocktail glass rimmed with sugar.
+                  - name: French Martini
+                    glass: martini
+                    category: Before Dinner Cocktail
+                    ingredients:
+                    - unit: cl
+                      amount: 4.5
+                      ingredient: Vodka
+                    - unit: cl
+                      amount: 1.5
+                      ingredient: Raspberry liqueur
+                    - unit: cl
+                      amount: 1.5
+                      ingredient: Pineapple juice
+                    preparation: Stir in mixing glass with ice cubes. Strain into chilled cocktail glass. Squeeze oil from lemon peel onto the drink.
+                  - name: Dirty Martini
+                    glass: martini
+                    category: Before Dinner Cocktail
+                    ingredients:
+                    - unit: cl
+                      amount: 6
+                      ingredient: Vodka
+                    - unit: cl
+                      amount: 1
+                      ingredient: Vermouth
+                      label: Dry vermouth
+                    - unit: cl
+                      amount: 1
+                      ingredient: Olive juice
+                    garnish: Green olive
+                    preparation: Stir in mixing glass with ice cubes. Strain into chilled martini glass.
+                  - name: Dry Martini
+                    glass: martini
+                    category: Before Dinner Cocktail
+                    ingredients:
+                    - unit: cl
+                      amount: 6
+                      ingredient: Gin
+                    - unit: cl
+                      amount: 1
+                      ingredient: Vermouth
+                      label: Dry vermouth
+                    preparation: Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
