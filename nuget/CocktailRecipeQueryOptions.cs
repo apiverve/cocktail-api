@@ -12,7 +12,6 @@ namespace APIVerve.API.CocktailRecipe
     {
         /// <summary>
         /// The name of the cocktail for which you want to get the recipe (e.g., martini)
-        /// Example: martini
         /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }
