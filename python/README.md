@@ -336,8 +336,9 @@ from apiverve_cocktailrecipe.apiClient import CocktailAPIClient
 
 api = CocktailAPIClient("[YOUR_API_KEY]")
 
+query = { "name": "martini" }
+
 try:
-    query = { "name": "martini" }
     result = api.execute(query)
     print(result)
 finally:
