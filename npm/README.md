@@ -148,6 +148,8 @@ async function makeRequest() {
             "special": "1 short strong Espresso"
           }
         ],
+        "ingredientCount": 4,
+        "estimatedStrength": "medium",
         "preparation": "Shake and strain into a chilled cocktail glass."
       },
       {
