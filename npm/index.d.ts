@@ -4,35 +4,49 @@ declare module '@apiverve/cocktail' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface cocktailResponse {
     status: string;
     error: string | null;
     data: CocktailRecipeData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface CocktailRecipeData {
-      count:      number;
-      filteredOn: string;
+      count:      number | null;
+      filteredOn: null | string;
       cocktails:  Cocktail[];
   }
   
   interface Cocktail {
-      name:        string;
-      glass:       string;
-      category:    string;
-      ingredients: Ingredient[];
-      preparation: string;
-      garnish?:    string;
+      name:               null | string;
+      glass:              null | string;
+      category:           null | string;
+      ingredients:        Ingredient[];
+      ingredientCount?:   number | null;
+      estimatedStrength?: null | string;
+      preparation:        null | string;
+      garnish?:           null | string;
   }
   
   interface Ingredient {
-      unit?:       Unit;
-      amount?:     number;
-      ingredient?: string;
-      label?:      string;
-      special?:    string;
+      unit?:       Unit | null;
+      amount?:     number | null;
+      ingredient?: null | string;
+      label?:      null | string;
+      special?:    null | string;
   }
   
   enum Unit {
