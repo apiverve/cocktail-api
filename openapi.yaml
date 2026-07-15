@@ -26,7 +26,7 @@ paths:
           in: query
           schema:
             type: string
-          required: false
+          required: true
           description: >-
             The name of the cocktail for which you want to get the recipe (e.g.,
             martini)
@@ -70,6 +70,8 @@ paths:
                             Sugar syrup (according to individual preference of
                             sweetness)
                         - special: 1 short strong Espresso
+                      ingredientCount: 4
+                      estimatedStrength: medium
                       preparation: Shake and strain into a chilled cocktail glass.
                     - name: Lemon Drop Martini
                       glass: martini
