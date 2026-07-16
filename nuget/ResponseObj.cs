@@ -25,12 +25,15 @@ namespace APIVerve.API.CocktailRecipe
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("count")]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
         [JsonProperty("filteredOn")]
         public string FilteredOn { get; set; }
@@ -53,29 +56,47 @@ namespace APIVerve.API.CocktailRecipe
         [JsonProperty("ingredients")]
         public Ingredient[] Ingredients { get; set; }
 
+        [JsonProperty("ingredientCount")]
+        public long? IngredientCount { get; set; }
+
+        [JsonProperty("estimatedStrength")]
+        public string EstimatedStrength { get; set; }
+
         [JsonProperty("preparation")]
         public string Preparation { get; set; }
 
-        [JsonProperty("garnish", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("garnish")]
         public string Garnish { get; set; }
     }
 
     public partial class Ingredient
     {
-        [JsonProperty("unit", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("unit")]
         public Unit? Unit { get; set; }
 
-        [JsonProperty("amount", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("amount")]
         public double? Amount { get; set; }
 
-        [JsonProperty("ingredient", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("ingredient")]
         public string IngredientIngredient { get; set; }
 
-        [JsonProperty("label", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("label")]
         public string Label { get; set; }
 
-        [JsonProperty("special", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonProperty("special")]
         public string Special { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 
     public enum Unit { Cl };
