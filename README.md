@@ -191,11 +191,150 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Cocktail Recipe API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "count": 5,
+    "filteredOn": "name",
+    "cocktails": [
+      {
+        "name": "Espresso Martini",
+        "glass": "martini",
+        "category": "After Dinner Cocktail",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 5,
+            "ingredient": "Vodka"
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Coffee liqueur",
+            "label": "Kahlúa"
+          },
+          {
+            "special": "Sugar syrup (according to individual preference of sweetness)"
+          },
+          {
+            "special": "1 short strong Espresso"
+          }
+        ],
+        "ingredientCount": 4,
+        "estimatedStrength": "medium",
+        "preparation": "Shake and strain into a chilled cocktail glass."
+      },
+      {
+        "name": "Lemon Drop Martini",
+        "glass": "martini",
+        "category": "All Day Cocktail",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 2.5,
+            "ingredient": "Vodka",
+            "label": "Citron Vodka"
+          },
+          {
+            "unit": "cl",
+            "amount": 2,
+            "ingredient": "Triple Sec"
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Lemon juice"
+          }
+        ],
+        "garnish": "Lemon slice",
+        "preparation": "Shake and strain into a chilled cocktail glass rimmed with sugar."
+      },
+      {
+        "name": "French Martini",
+        "glass": "martini",
+        "category": "Before Dinner Cocktail",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 4.5,
+            "ingredient": "Vodka"
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Raspberry liqueur"
+          },
+          {
+            "unit": "cl",
+            "amount": 1.5,
+            "ingredient": "Pineapple juice"
+          }
+        ],
+        "preparation": "Stir in mixing glass with ice cubes. Strain into chilled cocktail glass. Squeeze oil from lemon peel onto the drink."
+      },
+      {
+        "name": "Dirty Martini",
+        "glass": "martini",
+        "category": "Before Dinner Cocktail",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Vodka"
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Vermouth",
+            "label": "Dry vermouth"
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Olive juice"
+          }
+        ],
+        "garnish": "Green olive",
+        "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass."
+      },
+      {
+        "name": "Dry Martini",
+        "glass": "martini",
+        "category": "Before Dinner Cocktail",
+        "ingredients": [
+          {
+            "unit": "cl",
+            "amount": 6,
+            "ingredient": "Gin"
+          },
+          {
+            "unit": "cl",
+            "amount": 1,
+            "ingredient": "Vermouth",
+            "label": "Dry vermouth"
+          }
+        ],
+        "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive."
+      }
+    ]
+  }
 }
 ```
 
