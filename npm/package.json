@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/cocktail",
-  "version": "1.2.0",
-  "description": "Cocktail is a simple tool for getting cocktail recipes. It returns the ingredients, instructions, and more of the cocktail.",
+  "version": "1.2.2",
+  "description": "Cocktail Recipe retrieves cocktail recipes by drink name or ingredient, providing measured ingredients, preparation instructions, and recommended glassware. Responses include serving categories and ingredient counts, with support for pulling random drinks.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "cocktail", "cocktail recipe", "cocktail api", "cocktail tool", "cocktail software"
+    "cocktail recipe api", "cocktail ingredients lookup", "drink recipes by spirit", "find cocktails by ingredient", "mixed drink instructions"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/cocktail-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/cocktail?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/cocktail?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
