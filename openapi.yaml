@@ -2,8 +2,10 @@ openapi: 3.0.4
 info:
   title: Cocktail Recipe
   description: >-
-    Cocktail is a simple tool for getting cocktail recipes. It returns the
-    ingredients, instructions, and more of the cocktail.
+    Cocktail Recipe retrieves cocktail recipes by drink name or ingredient,
+    providing measured ingredients, preparation instructions, and recommended
+    glassware. Responses include serving categories and ingredient counts, with
+    support for pulling random drinks.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +20,7 @@ servers:
 paths:
   /v1/cocktail:
     get:
-      summary: Get Cocktail Recipe
+      summary: Cocktail Recipe
       description: Get the recipe for a cocktail based on the name or ingredient
       operationId: cocktail
       parameters:

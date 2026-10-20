@@ -1,13 +1,13 @@
-# [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Cocktail is a simple tool for getting cocktail recipes. It returns the ingredients, instructions, and more of the cocktail.
+Cocktail Recipe retrieves cocktail recipes by drink name or ingredient, providing measured ingredients, preparation instructions, and recommended glassware. Responses include serving categories and ingredient counts, with support for pulling random drinks.
 
 The Cocktail Recipe API provides a simple, reliable way to integrate cocktail recipe functionality into your applications. Built for developers who need production-ready cocktail recipe capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/cocktail-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/cocktail](https://docs.apiverve.com/ref/cocktail)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -342,7 +342,7 @@ A real response from the Cocktail Recipe API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
