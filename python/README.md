@@ -1,13 +1,12 @@
 Cocktail Recipe API
 ============
 
-Cocktail is a simple tool for getting cocktail recipes. It returns the ingredients, instructions, and more of the cocktail.
+Cocktail Recipe retrieves cocktail recipes by drink name or ingredient, providing measured ingredients, preparation instructions, and recommended glassware. Responses include serving categories and ingredient counts, with support for pulling random drinks.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-cocktailrecipe.svg)](https://pypi.org/project/apiverve-cocktailrecipe/)
+
+This is a Python wrapper for the [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-cocktailrecipe
 
 ## Configuration
 
-Before using the cocktail API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Cocktail Recipe API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The Cocktail Recipe API documentation is found here: [https://docs.apiverve.com/ref/cocktail](https://docs.apiverve.com/ref/cocktail?utm_source=pypi&utm_medium=readme).
+The Cocktail Recipe API documentation is found here: [https://docs.apiverve.com/ref/cocktail](https://docs.apiverve.com/ref/cocktail?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -128,6 +127,8 @@ print(result)
             "special": "1 short strong Espresso"
           }
         ],
+        "ingredientCount": 4,
+        "estimatedStrength": "medium",
         "preparation": "Shake and strain into a chilled cocktail glass."
       },
       {
@@ -350,7 +351,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -361,12 +362,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
