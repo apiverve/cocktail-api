@@ -1,6 +1,6 @@
 # Cocktail Recipe API - PHP Package
 
-Cocktail is a simple tool for getting cocktail recipes. It returns the ingredients, instructions, and more of the cocktail.
+Cocktail Recipe retrieves cocktail recipes by drink name or ingredient, providing measured ingredients, preparation instructions, and recommended glassware. Responses include serving categories and ingredient counts, with support for pulling random drinks.
 
 ## Installation
 
@@ -203,11 +203,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/cocktail?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/cocktail?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/cocktail?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/cocktail?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/cocktail?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/cocktail?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
