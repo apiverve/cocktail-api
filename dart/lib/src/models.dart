@@ -6,29 +6,57 @@ class CocktailResponse {
   final dynamic error;
   final CocktailData? data;
 
+  /// Set only when the current plan locks one or more fields; null otherwise.
+  final PremiumInfo? premium;
+
   CocktailResponse({
     required this.status,
     this.error,
     this.data,
+    this.premium,
   });
 
   factory CocktailResponse.fromJson(Map<String, dynamic> json) => CocktailResponse(
     status: json['status'] as String? ?? '',
     error: json['error'],
     data: json['data'] != null ? CocktailData.fromJson(json['data']) : null,
+    premium: json['premium'] != null ? PremiumInfo.fromJson(json['premium']) : null,
   );
 
   Map<String, dynamic> toJson() => {
     'status': status,
     if (error != null) 'error': error,
     if (data != null) 'data': data,
+    if (premium != null) 'premium': premium!.toJson(),
+  };
+}
+
+/// Describes fields the current plan does not unlock. Locked fields arrive as null
+/// in [data], and [lockedFields] names them (nested ones use dot paths).
+class PremiumInfo {
+  final String? message;
+  final String? upgradeUrl;
+  final List<String>? lockedFields;
+
+  PremiumInfo({this.message, this.upgradeUrl, this.lockedFields});
+
+  factory PremiumInfo.fromJson(Map<String, dynamic> json) => PremiumInfo(
+    message: json['message'] as String?,
+    upgradeUrl: json['upgrade_url'] as String?,
+    lockedFields: (json['locked_fields'] as List?)?.map((e) => e.toString()).toList(),
+  );
+
+  Map<String, dynamic> toJson() => {
+    if (message != null) 'message': message,
+    if (upgradeUrl != null) 'upgrade_url': upgradeUrl,
+    if (lockedFields != null) 'locked_fields': lockedFields,
   };
 }
 
 /// Response data for the Cocktail Recipe API.
 
 class CocktailData {
-  int? count;
+  num? count;
   String? filteredOn;
   List<CocktailDataCocktailsItem>? cocktails;
 
@@ -50,6 +78,8 @@ class CocktailDataCocktailsItem {
   String? glass;
   String? category;
   List<CocktailDataCocktailsItemIngredientsItem>? ingredients;
+  num? ingredientCount;
+  String? estimatedStrength;
   String? preparation;
 
   CocktailDataCocktailsItem({
@@ -57,6 +87,8 @@ class CocktailDataCocktailsItem {
     this.glass,
     this.category,
     this.ingredients,
+    this.ingredientCount,
+    this.estimatedStrength,
     this.preparation,
   });
 
@@ -65,13 +97,15 @@ class CocktailDataCocktailsItem {
       glass: json['glass'],
       category: json['category'],
       ingredients: (json['ingredients'] as List?)?.map((e) => CocktailDataCocktailsItemIngredientsItem.fromJson(e)).toList(),
+      ingredientCount: json['ingredientCount'],
+      estimatedStrength: json['estimatedStrength'],
       preparation: json['preparation'],
     );
 }
 
 class CocktailDataCocktailsItemIngredientsItem {
   String? unit;
-  int? amount;
+  num? amount;
   String? ingredient;
 
   CocktailDataCocktailsItemIngredientsItem({
@@ -88,13 +122,13 @@ class CocktailDataCocktailsItemIngredientsItem {
 }
 
 class CocktailRequest {
-  String? name;
+  String name;
 
   CocktailRequest({
-    this.name,
+    required this.name,
   });
 
   Map<String, dynamic> toJson() => {
-      if (name != null) 'name': name,
+      'name': name,
     };
 }

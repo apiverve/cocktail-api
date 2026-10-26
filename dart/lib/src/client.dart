@@ -46,10 +46,10 @@ final _formatPatterns = {
 
 /// Cocktail Recipe API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/cocktail?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/cocktail?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [name] - The name of the cocktail for which you want to get the recipe (e.g., martini)
+/// * [name] (required) - The name of the cocktail for which you want to get the recipe (e.g., martini) [maxLength: 100]
 class CocktailClient {
   final String apiKey;
   final String baseUrl;
@@ -57,7 +57,7 @@ class CocktailClient {
 
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
-    'name': ValidationRule(type: 'string', required: false),
+    'name': ValidationRule(type: 'string', required: true, maxLength: 100),
   };
 
   CocktailClient(this.apiKey, {

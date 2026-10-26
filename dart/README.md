@@ -1,11 +1,11 @@
 # Cocktail Recipe API - Dart/Flutter Client
 
-Cocktail is a simple tool for getting cocktail recipes. It returns the ingredients, instructions, and more of the cocktail.
+Cocktail Recipe retrieves cocktail recipes by drink name or ingredient, providing measured ingredients, preparation instructions, and recommended glassware. Responses include serving categories and ingredient counts, with support for pulling random drinks.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_cocktail.svg)](https://pub.dev/packages/apiverve_cocktail)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_cocktail: ^1.1.14
+  apiverve_cocktail: ^1.2.3
 ```
 
 Then run:
@@ -78,6 +78,8 @@ void main() async {
             "special": "1 short strong Espresso"
           }
         ],
+        "ingredientCount": 4,
+        "estimatedStrength": "medium",
         "preparation": "Shake and strain into a chilled cocktail glass."
       },
       {
@@ -179,12 +181,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/cocktail](https://docs.apiverve.com/ref/cocktail?utm_source=dart&utm_medium=readme)
+- **API Home:** [Cocktail Recipe API](https://apiverve.com/marketplace/cocktail?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/cocktail](https://docs.apiverve.com/ref/cocktail?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -192,4 +194,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
