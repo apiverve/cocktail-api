@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/cocktail",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Cocktail Recipe retrieves cocktail recipes by drink name or ingredient, providing measured ingredients, preparation instructions, and recommended glassware. Responses include serving categories and ingredient counts, with support for pulling random drinks.",
   "main": "index.js",
   "types": "index.d.ts",
