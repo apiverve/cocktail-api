@@ -1,6 +1,6 @@
 name: apiverve_cocktail
 description: "Cocktail Recipe retrieves cocktail recipes by drink name or ingredient, providing measured ingredients, preparation instructions, and recommended glassware. Responses include serving categories and ingredient counts, with support for pulling random drinks."
-version: 1.2.4
+version: 1.2.5
 homepage: https://apiverve.com/marketplace/cocktail?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/cocktail-api/tree/main/dart
 
